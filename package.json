@@ -1,0 +1,14 @@
+{
+  "name": "jquery-needjs",
+  "version": "1.0.0",
+  "description": "NeedJS, a jQuery plugin that can load js, css files dynamically, and integrated with jQuery Deferred.",
+  "main": "",
+  "dependencies": {
+  },
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-uglify": "^0.6.0"
+  },
+  "author": "JiayangShen",
+  "license": "MIT"
+}

@@ -1,0 +1,4 @@
+# Folders to ignore
+node_modules
+lib
+test
