@@ -1,7 +1,7 @@
 {
   "name": "jquery-needjs",
   "version": "1.0.0",
-  "description": "NeedJS, a jQuery plugin that can load js, css files dynamically, and integrated with jQuery Deferred.",
+  "description": "jQuery NeedJS, a jQuery plugin that can load js, css files dynamically, and integrated with jQuery Deferred.",
   "main": "",
   "dependencies": {
   },
