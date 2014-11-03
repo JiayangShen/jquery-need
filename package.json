@@ -1,7 +1,20 @@
 {
   "name": "jquery-needjs",
   "version": "1.0.0",
+  "homepage": "https://github.com/JiayangShen/jquery-need/",
   "description": "jQuery NeedJS, a jQuery plugin that can load js, css files dynamically, and integrated with jQuery Deferred.",
+  "keywords": [
+    "dynamical-script",
+    "noblocking-script",
+    "jquery-plugin",
+    "jquery-deferred",
+    "front-end",
+    "web"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JiayangShen/jquery-need.git"
+  },
   "main": "",
   "dependencies": {
   },
@@ -10,5 +23,8 @@
     "grunt-contrib-uglify": "^0.6.0"
   },
   "author": "JiayangShen",
-  "license": "MIT"
+  "license": {
+    "type": "MIT",
+    "url": "http://www.opensource.org/licenses/MIT"
+  }
 }

@@ -1,9 +1,9 @@
-/* jQuery Deferred 封装 LazyLoad 的 js、css 按需加载器。
-    加载前会首先检查对应的文件是否已经加载，尽量不重复加载。
-   依赖于 jQuery。
-*/
-
-;(function($, doc)
+/*!
+ * jQuery NeedJS v1.0.0 (https://github.com/JiayangShen/jquery-need/)
+ * Copyright 2014-2014 JiayangShen
+ * Licensed under MIT (http://www.opensource.org/licenses/MIT)
+ */
+(function($, doc)
 {
     // User agent and feature test information.
     var env,
@@ -71,8 +71,8 @@
     @method load
     @param {String} type resource type ('css' or 'js')
     @param {String|Array} urls   URL or array of URLs to load
-    @param {boolean} isAsync?
-    @param {boolean} check?
+    @param {boolean} isAsync? To load asynchronously or not.
+    @param {boolean} check? Check file has been loaded or not.
     @private
     */
     function load(type, urls, isAsync, check) 
@@ -166,33 +166,32 @@
     {
         urls: 
         {
-            | String: 要加载的文件URL,
-            | Array: 要加载的文件URL数组,
+            | String: URL of file to load dynamically.
+            | Array: Array of URLs.
             | Object: 
             {
                 paths: 
                 {
-                   | String: 要加载的文件URL,
-                   | Array: 要加载的文件URL数组
+                   | String: URL of file to load dynamically.
+                   | Array: Array of URLs.
                 },
-                names: 
+                names: // Used for checking file loaded or not
                 {
-                   | String: 要加载的文件名称,
-                   | Array: 要加载的文件名称数组，需要与 paths 里的每个项一一对应
+                   | String: Identify(or name) of a file to load.
+                   | Array: Array of URLs. one-to-one correspondent to paths.
                 }
             }
         },
         ? isAsync:
         {
-            boolean: '是否进行异步加载，默认非异步加载，当值为 true 时异步加载' 
+            boolean: To load js asynchronously (default) or not.
         }
         ? check: 
         {
-            boolean: '是否进行已加载检查，默认进行检查，当值为 false 时不检查' 
+            boolean: Check (default) file has been loaded or not.
         }
-        
     }
-    @return: Object: jQuery Deferred 对象
+    @return: Object: jQuery Deferred
     */
     $.needJS = function(urls, isAsync, check) 
                { return load('js', urls, isAsync, check); };
