@@ -30,7 +30,7 @@ This method is used to load one or more JS files.
 ### $.needCSS(urls, check?)
 
 This method is used to load one or more CSS files.
-#### Parames:
+#### Params:
 1. **urls**: URLs of external CSS files to be loaded. Its type can be `String` or `Array` or `Object`.
 3. **check**: Whether to check each CSS file has been loaded or not. Optional, can be set to `true` or `false`, default is false, mean do checking.
 
