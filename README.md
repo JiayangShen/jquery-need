@@ -42,16 +42,16 @@ Grab the plugin from `release/jquery-need-min.js` and include it in page like th
 <!-- jQuery is required before this plugin -->
 <script type="text/javascript" src="js/lib/jquery.min.js"></script>
 <!-- include this plugin in page -->
-<script type="text/javascript"></script>
+<script type="text/javascript" src="js/plugin/jquery.need.min.js"></script>
 ```
 
 Then, you can load external JS or CSS files dynamically like this:
 
 ```js
-$.needJS('far.js')
+$.needJS('foo.js')
 .done(function()
 {
-    //far.js has been loaded and executed, you can do some thing...
+    //foo.js has been loaded and executed, you can do some thing...
 });
 ```
 
