@@ -5,7 +5,7 @@ This plugin is based on [jQuery](http://jquery.com), some part code is borrowed 
 
 ## Features:
 
-- Loading JS, CSS files into web brwoser dynamically, in demand, in parallel while preserving execution order.
+- Loading JS, CSS files into web browser dynamically, in demand, in parallel while preserving execution order.
 - Integrated with jQuery Deferred, making asynchronous operation callbacks invoking streamline and easier.
 - Dynamical noblocking JS loading, no cross domain problem.
 - JS can also be set to execute asynchronously.
@@ -13,7 +13,7 @@ This plugin is based on [jQuery](http://jquery.com), some part code is borrowed 
 
 ## Browsers Supporting Note:
 
-For old version Firefox, old version Chrome, and Safari, though CSS files can be loaded and execute as expected, callbacks register to jQuery Deferred method such as `done()` won't execute. Because these brwoser don't truly support the `onload` event of the `<link>` DOM element. But if you like, you can fork this repository and fix the bug by yourself.
+For old version Firefox, old version Chrome, and Safari, though CSS files can be loaded and execute as expected, callbacks register to jQuery Deferred method such as `done()` won't execute. Because these browser don't truly support the `onload` event of the `<link>` DOM element. But if you like, you can fork this repository and fix the bug by yourself.
 
 ## APIs
 
@@ -23,7 +23,7 @@ This plugin includes two static methods of the `$` or `jQuery` object: `$.needJS
 
 This method is used to load one or more JS files.
 #### Parames:
-1. **urls**: URLs of external js files to be loaded. Its type can be `String` or `Array` or `Object`.
+1. **urls**: URLs of external js files to be loaded. Its type can be `String` or `Array` or a plain `Object` has the two properties `paths` and `names`. 
 2. **isAsync**: Whether to execute JS asynchronously. Optional, can be set to `true` or `false`, default is false, mean to execute JS not asynchronously.
 3. **check**: Whether to check each JS file has been loaded or not. Optional, can be set to `true` or `false`, default is false, mean do checking.
 
@@ -31,7 +31,7 @@ This method is used to load one or more JS files.
 
 This method is used to load one or more CSS files.
 #### Params:
-1. **urls**: URLs of external CSS files to be loaded. Its type can be `String` or `Array` or `Object`.
+1. **urls**: URLs of external CSS files to be loaded. Its type can be `String` or `Array` or a plain `Object` has the two properties `paths` and `names`. 
 3. **check**: Whether to check each CSS file has been loaded or not. Optional, can be set to `true` or `false`, default is false, mean do checking.
 
 ## Usage
