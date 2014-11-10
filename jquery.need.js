@@ -77,6 +77,8 @@
     */
     function load(type, urls, isAsync, check) 
     {
+        if(!urls) return $.Deferred().resolve().promise();
+        
         var isCSS = type == 'css', isJS = type == 'js';
         isAsync = isAsync === true && isJS ? true : false;
         check = check === false ? false : true;
