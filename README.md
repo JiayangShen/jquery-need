@@ -22,7 +22,7 @@ This plugin includes two static methods of the `$` or `jQuery` object: `$.needJS
 ### $.needJS(urls, isAsync?, check?)
 
 This method is used to load one or more JS files.
-#### Parames:
+#### Parameters:
 1. **urls**: URLs of external js files to be loaded. Its type can be `String` or `Array` or a plain `Object` has the two properties `paths` and `names`. 
 2. **isAsync**: Whether to execute JS asynchronously. Optional, can be set to `true` or `false`, default is false, mean to execute JS not asynchronously.
 3. **check**: Whether to check each JS file has been loaded or not. Optional, can be set to `true` or `false`, default is false, mean do checking.
@@ -30,7 +30,7 @@ This method is used to load one or more JS files.
 ### $.needCSS(urls, check?)
 
 This method is used to load one or more CSS files.
-#### Params:
+#### Parameters:
 1. **urls**: URLs of external CSS files to be loaded. Its type can be `String` or `Array` or a plain `Object` has the two properties `paths` and `names`. 
 3. **check**: Whether to check each CSS file has been loaded or not. Optional, can be set to `true` or `false`, default is false, mean do checking.
 
@@ -54,6 +54,38 @@ $.needJS('foo.js')
     //foo.js has been loaded and executed, you can do some thing...
 });
 ```
+
+Load and execute foo.js asynchronously:
+
+```js
+$.needJS('foo.js', true)
+.done(function()
+{
+    //foo.js has been loaded and executed, you can do some thing...
+});
+```
+
+Load more than one JS files:
+
+```js
+$.needJS(['foo.js', '/js/modules/module1.js'])
+.done(function()
+{
+    //js files have been loaded and executed, you can do some thing...
+});
+```
+
+Load CSS files:
+
+```js
+$.needCSS(['foo.css', '/css/bar.css'])
+.done(function()
+{
+    //CSS files have been loaded, you can do some thing...
+});
+```
+
+[`done()`](http://api.jquery.com/deferred.done/) is a common method available on any Object implements the [jQuery Deferred](http://api.jquery.com/category/deferred-object/) Pattern. We can use it to attach one or more **successful** callbacks. In this plugin, `done()` is the only recommonded method to use. Some jQuery Deffered method, such as `fail()`, have no effect in the APIs of this plugin.
 
 The true power of this plugin is, you can coperate the functionality of this plugin with other asynchronous operations that integrated with jQuery Deferred. For example, you want to make a AJAX request while loading a JS file, do something when all of the two asynchronous operations have been finished, like this:
 
