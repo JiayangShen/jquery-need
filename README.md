@@ -3,7 +3,7 @@
 
 This plugin is based on [jQuery](http://jquery.com), some part code is borrowed form [LazyLoad](https://github.com/rgrove/lazyload).
 
-## Features:   
+## Features:
 
 - Loading JS, CSS files into web browser dynamically, in demand, in parallel while preserving execution order.
 - Integrated with jQuery Deferred, making asynchronous operation callbacks invoking streamline and easier.
